@@ -11,8 +11,8 @@ date2 <- as.Date("2007-02-02", format = "%Y-%m-%d")
 household_power_subset <- subset (household_power_consumption, V1 >= date1 & V1 <= date2)
 household_power_subset$DateTime <- strptime(paste(household_power_subset$V1, household_power_subset$V2), "%Y-%m-%d %H:%M:%S") 
 
-## create and output plot3 showing 4 plots. 1. Global Active Power, 
-## 2. Voltage, 3. Energy sub metering, 4. Global Reactive Power
+## create and output plot3.png showing 4 plots: 
+## 1. Global Active Power, 2. Voltage, 3. Energy sub metering, 4. Global Reactive Power
 png(file = "plot4.png", width = 480, height = 480)
 par(mfrow = c(2, 2), mar = c(4, 5, 3, 3)) 
 
